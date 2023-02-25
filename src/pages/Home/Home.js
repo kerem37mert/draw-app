@@ -5,7 +5,7 @@ import styles from "./Home.style";
 const Home = ({navigation}) => {
 
     const goDraw = () => {
-        navigation.navigate("DrawScreen");
+        navigation.navigate("DrawPage");
     }
 
     return(
