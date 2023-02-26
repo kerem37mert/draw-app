@@ -7,6 +7,7 @@ const Input = (props) => {
             <TextInput 
                 style={styles.input}
                 placeholder="Listeye Ekle" 
+                value={props.value}
                 onChangeText={props.onChange}
             />
             <TouchableOpacity style={styles.button} onPress={props.onPress}>
