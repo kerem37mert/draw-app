@@ -42,6 +42,10 @@ const Draw = ({navigation}) => {
         {
             Alert.alert("Uyarı", "Çekiliş için en az 2 eleman gereklidir.");
         }
+        else
+        {
+            navigation.navigate("WinPage");
+        }
     }
     
     const goBack = () => {
