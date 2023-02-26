@@ -1,9 +1,9 @@
 import React from "react";
-import { SafeAreaView } from "react-native";
+import { SafeAreaView, View, Text } from "react-native";
 import Navbar from "../../components/Navbar";
 import styles from "./Win.style";
 
-const Win = ({navigation}) => {
+const Win = ({navigation, route}) => {
 
     const goBack = () => {
         navigation.goBack();
@@ -12,8 +12,10 @@ const Win = ({navigation}) => {
     return(
         <SafeAreaView style={styles.container}>
             <Navbar onPress={goBack} />
-            <Text>Çekiliş Sonucu</Text>
-            <Text>djsdghf</Text>
+            <View style={styles.resultContainer}>
+                <Text style={styles.title}>Çekiliş Sonucu</Text>
+                <Text style={styles.result}>{route.params.winner}</Text>
+            </View>
         </SafeAreaView>
     );
 }

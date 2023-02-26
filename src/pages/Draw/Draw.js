@@ -44,7 +44,8 @@ const Draw = ({navigation}) => {
         }
         else
         {
-            navigation.navigate("WinPage");
+            const random = Math.floor(Math.random() * items.length);
+            navigation.navigate("WinPage",{winner: items[random].value});
         }
     }
     
